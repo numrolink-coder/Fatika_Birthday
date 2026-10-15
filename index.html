@@ -979,7 +979,15 @@
     }
 
     const customGalleryInput = document.getElementById('customGalleryInput');
-    const defaultGalleryData = [];
+    const uploadedGalleryData = [
+      { title: 'Uploaded Memory 1', desc: 'Your uploaded memory.', src: '/uploads/1.jpeg' },
+      { title: 'Uploaded Memory 2', desc: 'Your uploaded memory.', src: '/uploads/2.jpeg' },
+      { title: 'Uploaded Memory 3', desc: 'Your uploaded memory.', src: '/uploads/3.jpeg' },
+      { title: 'Uploaded Memory 4', desc: 'Your uploaded memory.', src: '/uploads/4.jpeg' },
+      { title: 'Uploaded Memory 5', desc: 'Your uploaded memory.', src: '/uploads/5.jpeg' },
+      { title: 'Uploaded Memory 6', desc: 'Your uploaded memory.', src: '/uploads/7.jpeg' }
+    ];
+    const defaultGalleryData = uploadedGalleryData;
     let customGalleryImages = [];
 
     function applyGallerySource(sourcePool) {
@@ -1005,20 +1013,8 @@
       applyGallerySource(customGalleryImages.length ? customGalleryImages : defaultGalleryData);
     }
 
-    async function loadGalleryFromUploads() {
-      try {
-        const response = await fetch('/api/gallery');
-        if (!response.ok) return;
-        const uploaded = await response.json();
-        if (Array.isArray(uploaded) && uploaded.length) {
-          customGalleryImages = uploaded;
-          applyGallerySource(uploaded);
-        } else {
-          applyGallerySource(defaultGalleryData);
-        }
-      } catch (error) {
-        applyGallerySource(defaultGalleryData);
-      }
+    function loadGalleryFromUploads() {
+      applyGallerySource(uploadedGalleryData);
     }
 
     if (customGalleryInput) {
