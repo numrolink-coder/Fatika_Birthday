@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Fatika!</title>
+  <meta name="description" content="A modern, romantic, and elegant dark red and gold celebration website dedicated to Fatika, featuring heartfelt letters, interactive cake & candle blowing, memories gallery, video, and romantic music." />
+  <meta property="og:title" content="Happy Birthday Fatika" />
+  <meta property="og:description" content="A romantic dark red and gold birthday celebration website dedicated to Fatika." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Playfair Display, Great Vibes, Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine: {
+              950: '#0F0105',
+              900: '#1A0208',
+              850: '#22040C',
+              800: '#2E0511',
+              700: '#3D0819',
+              600: '#540B22',
+              500: '#800020', // Royal Burgundy
+              400: '#A4133C',
+              300: '#C9184A',
+            },
+            gold: {
+              100: '#FFFBEA',
+              200: '#FFF3C4',
+              300: '#FDE68A',
+              400: '#F5D061',
+              500: '#D4AF37', // Pure Metallic Gold
+              600: '#B8860B',
+              700: '#996515',
+              800: '#784F0E',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            sans: ['"Poppins"', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
+            'flicker': 'flameFlicker 1.5s ease-in-out infinite alternate',
+            'shimmer': 'shimmer 2.5s infinite',
+            'gold-glow': 'goldGlow 3s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(2deg)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+              '50%': { transform: 'scale(1.04)', opacity: '0.9' },
+            },
+            goldGlow: {
+              '0%': { filter: 'drop-shadow(0 0 10px rgba(212, 175, 55, 0.4))' },
+              '100%': { filter: 'drop-shadow(0 0 25px rgba(245, 208, 97, 0.8))' },
+            },
+            flameFlicker: {
+              '0%': { transform: 'scale(1) skewX(-2deg)', filter: 'drop-shadow(0 0 14px rgba(245, 208, 97, 0.95))' },
+              '25%': { transform: 'scale(1.08, 0.95) skewX(2deg)', filter: 'drop-shadow(0 0 20px rgba(212, 175, 55, 0.95))' },
+              '50%': { transform: 'scale(0.96, 1.05) skewX(-1deg)', filter: 'drop-shadow(0 0 16px rgba(254, 240, 138, 1))' },
+              '75%': { transform: 'scale(1.04, 0.98) skewX(1.5deg)', filter: 'drop-shadow(0 0 22px rgba(245, 158, 11, 0.9))' },
+              '100%': { transform: 'scale(1) skewX(-2deg)', filter: 'drop-shadow(0 0 14px rgba(245, 208, 97, 0.95))' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom royal dark red & gold scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #140207;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #B8860B;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 243, 196, 0.2);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #F5D061;
+    }
+
+    /* Luxurious Dark Red Velvet Glassmorphism */
+    .glass-card {
+      background: rgba(36, 5, 14, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 243, 196, 0.18);
+    }
+    .glass-card-deep {
+      background: rgba(24, 3, 9, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.9);
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body:not(.journey-started) header,
+    body:not(.journey-started) main,
+    body:not(.journey-started) footer,
+    body:not(.journey-started) #musicFloatingPlayer {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #welcomeOverlay {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background:
+        linear-gradient(135deg, rgba(17, 3, 10, 0.8), rgba(18, 40, 58, 0.65)),
+        radial-gradient(circle at 50% 25%, rgba(245, 208, 97, 0.25), transparent 35%),
+        #0d0207;
+      z-index: 100;
+      transition: opacity 0.7s ease, visibility 0.7s ease;
+    }
+
+    body.journey-started #welcomeOverlay {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .welcome-card {
+      max-width: 36rem;
+      width: 100%;
+      background: rgba(24, 3, 9, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 2rem;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      text-align: center;
+    }
+
+    .welcome-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #D4AF37, #F5D061, #D4AF37);
+      color: #1b0309;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      border: 1px solid rgba(255, 246, 209, 0.8);
+      box-shadow: 0 20px 30px rgba(212, 175, 55, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .welcome-cta:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 24px 40px rgba(212, 175, 55, 0.3);
+    }
+
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+      .welcome-card {
+        border-radius: 1.25rem;
+      }
+
+      #countdown-wrapper .grid {
+        gap: 0.5rem;
+      }
+
+      .glass-card,
+      .glass-card-deep {
+        border-radius: 1.25rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 15px;
+      }
+
+      main > section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      #hero {
+        min-height: 100vh;
+        padding-top: 4rem;
+      }
+
+      [id="countdownGrid"] {
+        gap: 0.4rem;
+      }
+
+      #countdownGrid > div {
+        padding: 0.7rem 0.35rem;
+      }
+
+      .flex-col.sm\:flex-row {
+        width: 100%;
+      }
+
+      .flex-col.sm\:flex-row a {
+        width: 100%;
+      }
+    }
+
+    /* Radiant Metallic Gold Gradient for Titles */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF6D1 0%, #F5D061 25%, #DFB85C 50%, #FAF0CD 75%, #C29324 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 14px rgba(212, 175, 55, 0.35));
+    }
+
+    /* Shimmering Gold Foil Accent Bar */
+    .gold-foil-bar {
+      background: linear-gradient(90deg, #996515 0%, #D4AF37 25%, #FFF6D1 50%, #D4AF37 75%, #996515 100%);
+    }
+
+    /* Interactive Wax Seal & Envelope */
+    .envelope-wrapper {
+      perspective: 1200px;
+    }
+    .envelope-flap {
+      transform-origin: top center;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .envelope-open .envelope-flap {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+    .letter-paper {
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+    }
+    .envelope-open .letter-paper {
+      transform: translateY(-80px);
+      z-index: 10;
+    }
+
+    /* Cake Flame Smoke */
+    @keyframes smokeRise {
+      0% {
+        opacity: 0.8;
+        transform: translateY(0) scale(1) translateX(0);
+      }
+      50% {
+        opacity: 0.4;
+        transform: translateY(-30px) scale(1.6) translateX(8px);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-60px) scale(2.4) translateX(-10px);
+      }
+    }
+    .smoke-puff {
+      animation: smokeRise 1.6s forwards ease-out;
+    }
+
+    /* Audio visualizer bar animations (Gold Bars) */
+    @keyframes barDance {
+      0%, 100% { height: 4px; }
+      50% { height: 18px; }
+    }
+    .bar-1 { animation: barDance 0.8s ease-in-out infinite alternate; }
+    .bar-2 { animation: barDance 0.6s ease-in-out infinite alternate 0.2s; }
+    .bar-3 { animation: barDance 0.9s ease-in-out infinite alternate 0.4s; }
+    .bar-4 { animation: barDance 0.7s ease-in-out infinite alternate 0.1s; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#140207] via-[#24050E] to-[#120206] text-[#F5E6C8] font-sans min-h-screen relative overflow-x-hidden selection:bg-gold-500 selection:text-wine-950">
+
+  <!-- Interactive Floating Background Canvas (Golden Stars, Sparkles, Ruby Hearts) -->
+  <canvas id="ambientCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-80"></canvas>
+
+  <!-- Interactive Ephemeral Romantic Cursor Heart Trail Canvas -->
+  <canvas id="cursorCanvas" class="fixed inset-0 pointer-events-none z-50"></canvas>
+
+  <!-- Ambient Dark Red Velvet & Warm Gold Glow Orbs -->
+  <div class="fixed top-12 left-1/4 w-96 h-96 bg-[#800020]/25 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-subtle"></div>
+  <div class="fixed bottom-20 right-10 w-[30rem] h-[30rem] bg-gold-600/15 rounded-full blur-3xl pointer-events-none -z-10 animate-float-slow"></div>
+  <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-[#540B22]/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <div id="welcomeOverlay" aria-live="polite">
+    <div class="welcome-card">
+      <span class="font-script text-4xl sm:text-5xl text-gold-400 block mb-3">Happy Birthday</span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold gold-gradient-text leading-tight mb-4">Fatika, your next beautiful chapter begins here.</h1>
+      <p class="text-sm sm:text-base text-[#F5E6C8] mb-6 max-w-md mx-auto font-light">
+        Tap below to enter the birthday journey filled with love, memories, music, and your sweetest wishes.
+      </p>
+      <button id="startJourneyBtn" class="welcome-cta" type="button">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>Enter the Journey</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-[#160208]/85 border-b border-gold-500/30 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
+      <!-- Zone 1: Brand Wordmark -->
+      <a href="#hero" class="text-xl md:text-2xl font-serif font-bold text-gold-300 tracking-tight flex items-center gap-2 shrink-0 group">
+        <span class="font-script text-3xl md:text-4xl text-gold-400 font-normal group-hover:scale-105 transition-transform drop-shadow-[0_0_8px_rgba(212,175,55,0.4)]">Fatika</span>
+        <span class="text-[11px] font-sans uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-wine-800/80 text-gold-300 border border-gold-500/40 font-semibold shadow-inner">Birthday Edition</span>
+      </a>
+
+      <!-- Zone 2: Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gold-200/80">
+        <a href="#hero" class="hover:text-gold-400 transition-colors whitespace-nowrap">Home</a>
+        <a href="#countdown-wrapper" class="hover:text-gold-400 transition-colors whitespace-nowrap flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400"></i>Countdown</a>
+        <a href="#letter-section" class="hover:text-gold-400 transition-colors whitespace-nowrap">Special Note</a>
+        <a href="#gallery-section" class="hover:text-gold-400 transition-colors whitespace-nowrap">Memories</a>
+        <a href="#wish-section" class="hover:text-gold-400 transition-colors whitespace-nowrap">Make a Wish</a>
+      </nav>
+
+      <!-- Zone 3: Primary Action CTA -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="#wish-section" class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-wine-600 via-wine-500 to-wine-600 text-gold-200 border border-gold-500/50 shadow-md shadow-black/50 hover:shadow-gold-500/20 hover:border-gold-300 active:scale-95 transition-all">
+          <i data-lucide="cake" class="w-3.5 h-3.5 text-gold-400"></i>
+          <span>Make a Wish</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <main class="relative z-10">
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: ANIMATED HERO LANDING -->
+    <!-- ========================================== -->
+    <section id="hero" class="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center px-4 py-16 relative overflow-hidden">
+      <!-- Decorative script ribbon -->
+      <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-wine-800/90 border border-gold-500/40 text-gold-300 text-xs sm:text-sm font-medium mb-6 shadow-lg shadow-black/40 animate-pulse-subtle">
+        <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i>
+        <span class="tracking-wide">Tonight is all about celebrating you</span>
+        <i data-lucide="heart" class="w-4 h-4 text-rose-500 fill-rose-500"></i>
+      </div>
+
+      <!-- Script flourish -->
+      <p class="font-script text-4xl sm:text-5xl md:text-6xl text-gold-300 mb-2 drop-shadow-md">To the loveliest soul,</p>
+
+      <!-- Large Elegant Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold tracking-tight gold-gradient-text mb-6 max-w-4xl mx-auto leading-tight">
+        Happy Birthday, Fatika! 
+      </h1>
+
+      <!-- Subtle Animated Subtitle -->
+      <p class="text-base sm:text-xl md:text-2xl text-[#F3E5AB]/90 font-light max-w-2xl mx-auto mb-8 leading-relaxed font-sans">
+        Wishing you a day as special and beautiful as you are. May every second bring a smile as radiant as your heart.
+      </p>
+
+      <!-- ========================================== -->
+      <!-- COUNTDOWN TIMER TO FATIKA'S BIRTH MOMENT -->
+      <!-- ========================================== -->
+      <div id="countdown-wrapper" class="w-full max-w-xl mx-auto mb-10 px-2 sm:px-0">
+        <div class="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-2xl border border-gold-500/40 relative overflow-hidden backdrop-blur-xl">
+          <!-- Subtle top metallic gold foil bar -->
+          <div class="absolute top-0 left-0 right-0 h-1.5 gold-foil-bar"></div>
+
+          <!-- Header badge / Kicker -->
+          <div class="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-gold-500/25 flex-wrap">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping"></span>
+              <span id="countdownKicker" class="text-xs font-semibold tracking-wider uppercase text-gold-300">
+                Awaiting The Exact Moment of Fatika's Birth
+              </span>
+            </div>
+            
+            <!-- Quick Edit / Customize Birth Time Button -->
+            <button onclick="openBirthTimeModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-gold-200 bg-wine-800/80 hover:bg-wine-700 border border-gold-500/40 transition-colors cursor-pointer" title="Adjust the target birth date & time">
+              <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400"></i>
+              <span id="targetTimeBadge">Loading...</span>
+              <i data-lucide="edit-3" class="w-3 h-3 text-gold-400"></i>
+            </button>
+          </div>
+
+          <!-- Anticipation Message -->
+          <div class="text-center mb-5">
+            <h2 id="countdownTitle" class="font-serif text-lg sm:text-2xl font-bold text-gold-200">
+              Counting Down to Fatika's Special Moment ✨
+            </h2>
+            <p id="countdownSub" class="text-xs sm:text-sm text-[#E5C578] mt-1 font-light">
+              Every passing second brings us closer to celebrating the exact minute you blessed this earth.
+            </p>
+          </div>
+
+          <!-- Countdown Digits Grid -->
+          <div id="countdownGrid" class="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-md mx-auto">
+            <!-- Days -->
+            <div class="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-wine-900/90 border border-gold-500/35 shadow-inner relative overflow-hidden group hover:border-gold-400 transition-all">
+              <span id="cdDays" class="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-gold-300 tabular-nums leading-none">00</span>
+              <span class="text-[10px] sm:text-xs font-sans tracking-widest uppercase font-semibold text-gold-500 mt-2">Days</span>
+            </div>
+
+            <!-- Hours -->
+            <div class="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-wine-900/90 border border-gold-500/35 shadow-inner relative overflow-hidden group hover:border-gold-400 transition-all">
+              <span id="cdHours" class="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-gold-300 tabular-nums leading-none">00</span>
+              <span class="text-[10px] sm:text-xs font-sans tracking-widest uppercase font-semibold text-gold-500 mt-2">Hours</span>
+            </div>
+
+            <!-- Minutes -->
+            <div class="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-wine-900/90 border border-gold-500/35 shadow-inner relative overflow-hidden group hover:border-gold-400 transition-all">
+              <span id="cdMinutes" class="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-gold-300 tabular-nums leading-none">00</span>
+              <span class="text-[10px] sm:text-xs font-sans tracking-widest uppercase font-semibold text-gold-500 mt-2">Mins</span>
+            </div>
+
+            <!-- Seconds -->
+            <div class="flex flex-col items-center justify-center p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-b from-wine-600 to-wine-800 text-gold-200 border border-gold-400 shadow-md shadow-black/60 relative overflow-hidden group">
+              <span id="cdSeconds" class="font-serif text-2xl sm:text-4xl md:text-5xl font-extrabold text-gold-200 tabular-nums leading-none">00</span>
+              <span class="text-[10px] sm:text-xs font-sans tracking-widest uppercase font-semibold text-gold-400 mt-2">Secs</span>
+            </div>
+          </div>
+
+          <!-- Celebration State (When timer reaches 0 / Birthday moment is active) -->
+          <div id="countdownCelebration" class="hidden text-center py-4 px-2">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-gold-600 to-gold-500 text-wine-950 text-xs font-bold uppercase tracking-wider mb-3 shadow-md animate-bounce">
+              <i data-lucide="sparkles" class="w-4 h-4 text-wine-900"></i>
+              <span>The Moment Has Arrived!</span>
+              <i data-lucide="sparkles" class="w-4 h-4 text-wine-900"></i>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-extrabold gold-gradient-text mb-2">
+              Happy Birthday, Fatika! It's Your Special Time! 💖🎂
+            </h3>
+            <p id="elapsedText" class="text-xs sm:text-sm text-[#F5E6C8] max-w-md mx-auto mb-4 font-light">
+              The world became a brighter, gentler, and much more beautiful place at this exact moment.
+            </p>
+            <div class="flex items-center justify-center gap-3">
+              <button onclick="triggerLoveConfetti()" class="px-5 py-2 rounded-full bg-gradient-to-r from-wine-600 to-wine-500 text-gold-200 border border-gold-500 text-xs font-semibold shadow hover:scale-105 transition-all">
+                🎉 Celebrate Again
+              </button>
+              <button onclick="openBirthTimeModal()" class="px-4 py-2 rounded-full bg-wine-800 text-gold-300 border border-gold-500/40 text-xs font-medium hover:bg-wine-700 transition-colors">
+                Change Target Time
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Call to Actions -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+        <!-- Smooth Open Your Card CTA Button -->
+        <a href="#letter-section" onclick="triggerLetterAutoOpen()" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-wine-600 via-wine-500 to-wine-600 text-gold-100 font-semibold border border-gold-500 shadow-xl shadow-black/60 hover:shadow-gold-500/30 hover:border-gold-300 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+          <i data-lucide="mail-open" class="w-5 h-5 text-gold-300 group-hover:scale-110 transition-transform"></i>
+          <span class="tracking-wide text-base">Open Your Card</span>
+          <i data-lucide="arrow-down" class="w-4 h-4 text-gold-400 animate-bounce"></i>
+        </a>
+
+        <!-- Make a Wish Jump -->
+        <a href="#wish-section" class="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-wine-900/80 border border-gold-500/50 text-gold-300 font-medium hover:bg-wine-800 hover:border-gold-400 transition-all">
+          <i data-lucide="cake" class="w-5 h-5 text-gold-400"></i>
+          <span>Blow The Candle 🎂</span>
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="mt-16 sm:mt-20 flex flex-col items-center text-xs uppercase tracking-widest text-gold-500 font-semibold gap-2">
+        <span>Scroll to explore</span>
+        <div class="w-6 h-10 border-2 border-gold-500/60 rounded-full flex justify-center pt-2">
+          <div class="w-1.5 h-2.5 bg-gold-400 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: INTERACTIVE BIRTHDAY NOTE / LETTER -->
+    <!-- ========================================== -->
+    <section id="letter-section" class="py-24 px-4 sm:px-6 max-w-4xl mx-auto scroll-mt-20">
+      <div class="text-center mb-12">
+        <span class="font-script text-3xl sm:text-4xl text-gold-400 block mb-1">A Heartfelt Message</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold gold-gradient-text tracking-tight">Your Birthday Letter</h2>
+        <p class="text-[#E5C578] text-sm sm:text-base mt-2 max-w-md mx-auto font-light">
+          Tap the envelope below to unlock the words written just for you.
+        </p>
+      </div>
+
+      <!-- Envelope Container with Interactive Opening -->
+      <div id="envelopeContainer" class="envelope-wrapper relative max-w-xl mx-auto">
+        <!-- Interactive Envelope -->
+        <div id="envelopeBody" class="relative bg-gradient-to-br from-wine-800 via-wine-900 to-wine-950 rounded-2xl p-6 sm:p-8 shadow-2xl border border-gold-500/50 cursor-pointer overflow-hidden group transition-all duration-500">
+          
+          <!-- Background envelope lining pattern -->
+          <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#FDE68A_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+          <!-- Unopened State Teaser -->
+          <div id="envelopeCover" class="text-center py-12 relative z-20 transition-all duration-500">
+            <!-- Wax Seal Button -->
+            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-600 shadow-xl shadow-black/80 flex items-center justify-center border-2 border-gold-200 group-hover:scale-105 active:scale-95 transition-transform duration-300">
+              <span class="font-serif text-3xl font-extrabold text-wine-950">F</span>
+            </div>
+            <p class="text-gold-200 font-serif text-xl sm:text-2xl font-semibold mb-2">Exclusively for Fatika</p>
+            <p class="text-gold-400/80 text-xs sm:text-sm tracking-widest uppercase font-medium mb-6">Confidential & Sealed with Affection</p>
+            <button onclick="openEnvelope()" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-wine-950 font-semibold text-sm shadow-lg hover:from-gold-400 hover:to-gold-300 transition-all">
+              <i data-lucide="sparkle" class="w-4 h-4 text-wine-950"></i>
+              <span>Click to Open Envelope</span>
+            </button>
+          </div>
+
+          <!-- Opened Letter (Glassmorphism & Soft Glow) -->
+          <div id="letterPaper" class="hidden opacity-0 transform translate-y-6 transition-all duration-700 glass-card-deep rounded-xl p-6 sm:p-10 shadow-2xl border border-gold-500/60 text-left relative overflow-hidden">
+            <!-- Decorative Gold Foil Top Border -->
+            <div class="absolute top-0 left-0 right-0 h-1.5 gold-foil-bar"></div>
+
+            <!-- Letter Corner Flourish -->
+            <div class="flex items-center justify-between border-b border-gold-500/30 pb-4 mb-6">
+              <div>
+                <span class="font-script text-3xl text-gold-300">Dear Fatika,</span>
+                <p class="text-xs text-gold-500 font-mono tracking-wider mt-0.5">FROM SOMEONE WHO ADORES YOU</p>
+              </div>
+              <div class="flex items-center gap-1.5 text-gold-400">
+                <i data-lucide="heart" class="w-4 h-4 fill-rose-500 text-rose-500"></i>
+                <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i>
+              </div>
+            </div>
+
+            <!-- PROMINENT EXACT BIRTHDAY MESSAGE IN RADIANT GOLD -->
+            <div class="relative py-6 px-4 sm:px-8 rounded-xl bg-gradient-to-r from-wine-900 via-wine-800 to-wine-900 border border-gold-500/60 mb-8 shadow-inner shadow-black/80">
+              <p class="font-serif text-lg sm:text-2xl md:text-2xl font-bold leading-relaxed tracking-wide text-center uppercase gold-gradient-text drop-shadow-md">
+                "I HOPE YOU SMILE AT ME, OR AT LEAST SMILE AT YOUR PHONE WHEN YOU READ THIS, BECAUSE YOU'RE A SPECIAL BIRTHDAY GIRL, AND YES, I MISS YOU. HAPPY BIRTHDAY ❤️"
+              </p>
+            </div>
+
+            <!-- Warm Additional Note -->
+            <p class="text-[#F5E6C8]/90 text-sm sm:text-base leading-relaxed mb-6 font-light">
+              May this new year of your life unfold with breathtaking adventures, warmth in every room you enter, peaceful nights, and moments that make your heart dance. You deserve every ounce of magic the universe has to offer.
+            </p>
+
+            <!-- Signature & Signoff -->
+            <div class="flex items-end justify-between pt-4 border-t border-gold-500/30">
+              <div>
+                <p class="text-xs uppercase tracking-wider text-gold-500 font-semibold">With warmest thoughts,</p>
+                <p class="font-script text-3xl sm:text-4xl text-gold-300 mt-1">Always Yours ✨</p>
+              </div>
+
+              <!-- Re-fold or Confetti button -->
+              <button onclick="triggerLoveConfetti()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-wine-800 hover:bg-wine-700 text-gold-300 border border-gold-500/40 text-xs font-semibold transition-colors">
+                <i data-lucide="party-popper" class="w-3.5 h-3.5 text-gold-400"></i>
+                <span>Send Love</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: PHOTO GALLERY / MEMORIES GRID -->
+    <!-- ========================================== -->
+    <section id="gallery-section" class="py-24 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-20">
+      <div class="text-center mb-16">
+        <span class="font-script text-3xl sm:text-4xl text-gold-400 block mb-1">Treasured Chapters</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold gold-gradient-text tracking-tight">Memories & Glowing Moments</h2>
+        <p class="text-[#E5C578] text-sm sm:text-base mt-2 max-w-lg mx-auto font-light">
+          Every glance, every laughter, every golden second spent creating beautiful memories.
+        </p>
+
+        <div class="mt-6 flex justify-center">
+          <label for="customGalleryInput" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-gold-500/60 bg-wine-900/80 text-gold-200 text-xs sm:text-sm font-semibold cursor-pointer hover:border-gold-300 hover:bg-wine-800 transition-all">
+            <i data-lucide="images" class="w-4 h-4 text-gold-400"></i>
+            <span>Upload Your Own Photos</span>
+          </label>
+          <input id="customGalleryInput" type="file" accept="image/*" multiple class="hidden" />
+        </div>
+      </div>
+
+      <!-- Responsive CSS Grid: 6 Photo Slots -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- PHOTO 1: Replace src with Fatika's photo URL -->
+        <div onclick="openLightbox(0)" class="group cursor-pointer rounded-2xl overflow-hidden glass-card shadow-xl hover:shadow-gold-500/20 transition-all duration-300 hover:-translate-y-1.5 border border-gold-500/35 hover:border-gold-400">
+          <div class="relative aspect-[4/5] overflow-hidden bg-wine-950">
+            <img 
+              id="gallery-img-0"
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+              alt="Fatika Radiant Portrait" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Memory 01</span>
+              <h3 class="text-gold-200 font-serif text-lg font-bold">Radiant Smile</h3>
+              <p class="text-[#F5E6C8] text-xs mt-1">A smile that can light up the entire room in an instant.</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between text-xs text-gold-300 font-medium bg-wine-900/60">
+            <span>Radiant Smile</span>
+            <span class="flex items-center gap-1 text-gold-400"><i data-lucide="eye" class="w-3.5 h-3.5"></i> Preview</span>
+          </div>
+        </div>
+
+        <!-- PHOTO 2: Replace src with Fatika's photo URL -->
+        <div onclick="openLightbox(1)" class="group cursor-pointer rounded-2xl overflow-hidden glass-card shadow-xl hover:shadow-gold-500/20 transition-all duration-300 hover:-translate-y-1.5 border border-gold-500/35 hover:border-gold-400">
+          <div class="relative aspect-[4/5] overflow-hidden bg-wine-950">
+            <img 
+              id="gallery-img-1"
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" 
+              alt="Fatika Golden Hour Elegance" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              onerror="this.src='https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Memory 02</span>
+              <h3 class="text-gold-200 font-serif text-lg font-bold">Golden Hour Elegance</h3>
+              <p class="text-[#F5E6C8] text-xs mt-1">Sunlight kissing your hair and that effortless grace.</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between text-xs text-gold-300 font-medium bg-wine-900/60">
+            <span>Golden Hour Glow</span>
+            <span class="flex items-center gap-1 text-gold-400"><i data-lucide="eye" class="w-3.5 h-3.5"></i> Preview</span>
+          </div>
+        </div>
+
+        <!-- PHOTO 3: Replace src with Fatika's photo URL -->
+        <div onclick="openLightbox(2)" class="group cursor-pointer rounded-2xl overflow-hidden glass-card shadow-xl hover:shadow-gold-500/20 transition-all duration-300 hover:-translate-y-1.5 border border-gold-500/35 hover:border-gold-400">
+          <div class="relative aspect-[4/5] overflow-hidden bg-wine-950">
+            <img 
+              id="gallery-img-2"
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" 
+              alt="Fatika Celebration & Cheers" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Memory 03</span>
+              <h3 class="text-gold-200 font-serif text-lg font-bold">Carefree Laughter</h3>
+              <p class="text-[#F5E6C8] text-xs mt-1">The kind of pure joy that makes time stand completely still.</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between text-xs text-gold-300 font-medium bg-wine-900/60">
+            <span>Pure Laughter</span>
+            <span class="flex items-center gap-1 text-gold-400"><i data-lucide="eye" class="w-3.5 h-3.5"></i> Preview</span>
+          </div>
+        </div>
+
+        <!-- PHOTO 4: Replace src with Fatika's photo URL -->
+        <div onclick="openLightbox(3)" class="group cursor-pointer rounded-2xl overflow-hidden glass-card shadow-xl hover:shadow-gold-500/20 transition-all duration-300 hover:-translate-y-1.5 border border-gold-500/35 hover:border-gold-400">
+          <div class="relative aspect-[4/5] overflow-hidden bg-wine-950">
+            <img 
+              id="gallery-img-3"
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" 
+              alt="Fatika Serene Moments" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              onerror="this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Memory 04</span>
+              <h3 class="text-gold-200 font-serif text-lg font-bold">Poise & Warmth</h3>
+              <p class="text-[#F5E6C8] text-xs mt-1">Quiet confidence and a kindness that touches everyone.</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between text-xs text-gold-300 font-medium bg-wine-900/60">
+            <span>Poise & Charm</span>
+            <span class="flex items-center gap-1 text-gold-400"><i data-lucide="eye" class="w-3.5 h-3.5"></i> Preview</span>
+          </div>
+        </div>
+
+        <!-- PHOTO 5: Replace src with Fatika's photo URL -->
+        <div onclick="openLightbox(4)" class="group cursor-pointer rounded-2xl overflow-hidden glass-card shadow-xl hover:shadow-gold-500/20 transition-all duration-300 hover:-translate-y-1.5 border border-gold-500/35 hover:border-gold-400">
+          <div class="relative aspect-[4/5] overflow-hidden bg-wine-950">
+            <img 
+              id="gallery-img-4"
+              src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80" 
+              alt="Roses & Birthday Wishes" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              onerror="this.src='https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Memory 05</span>
+              <h3 class="text-gold-200 font-serif text-lg font-bold">Blooms of Love</h3>
+              <p class="text-[#F5E6C8] text-xs mt-1">Flowers bloom, but none quite as breathtaking as you.</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between text-xs text-gold-300 font-medium bg-wine-900/60">
+            <span>Sweet Blooms</span>
+            <span class="flex items-center gap-1 text-gold-400"><i data-lucide="eye" class="w-3.5 h-3.5"></i> Preview</span>
+          </div>
+        </div>
+
+        <!-- PHOTO 6: Replace src with Fatika's photo URL -->
+        <div onclick="openLightbox(5)" class="group cursor-pointer rounded-2xl overflow-hidden glass-card shadow-xl hover:shadow-gold-500/20 transition-all duration-300 hover:-translate-y-1.5 border border-gold-500/35 hover:border-gold-400">
+          <div class="relative aspect-[4/5] overflow-hidden bg-wine-950">
+            <img 
+              id="gallery-img-5"
+              src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80" 
+              alt="Celebration Sparklers & Confetti" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              onerror="this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-wine-950 via-wine-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Memory 06</span>
+              <h3 class="text-gold-200 font-serif text-lg font-bold">Forever Shining</h3>
+              <p class="text-[#F5E6C8] text-xs mt-1">Here's to sparkling brighter with every single birthday.</p>
+            </div>
+          </div>
+          <div class="p-4 flex items-center justify-between text-xs text-gold-300 font-medium bg-wine-900/60">
+            <span>Sparkling Ahead</span>
+            <span class="flex items-center gap-1 text-gold-400"><i data-lucide="eye" class="w-3.5 h-3.5"></i> Preview</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Customizer Tip / Helper -->
+      <div class="mt-8 text-center">
+        <p class="text-xs text-gold-400/80 inline-flex items-center gap-1">
+          <i data-lucide="info" class="w-3.5 h-3.5 text-gold-400"></i>
+          Tip: You can replace any photo placeholder with Fatika's photos in the HTML source code.
+        </p>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-4 transition-opacity duration-300">
+      <button onclick="closeLightbox()" class="absolute top-6 right-6 text-gold-300 hover:text-gold-100 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-50">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <button onclick="prevLightbox()" class="absolute left-4 sm:left-8 text-gold-300 hover:text-gold-100 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-50">
+        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+      </button>
+
+      <button onclick="nextLightbox()" class="absolute right-4 sm:right-8 text-gold-300 hover:text-gold-100 p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-50">
+        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+      </button>
+
+      <div class="max-w-3xl max-h-[85vh] flex flex-col items-center">
+        <img id="lightboxImg" src="" alt="Enlarged Memory" class="max-h-[70vh] w-auto rounded-xl object-contain shadow-2xl border border-gold-500/40" />
+        <div class="mt-4 text-center text-white">
+          <h4 id="lightboxTitle" class="font-serif text-xl font-bold text-gold-200"></h4>
+          <p id="lightboxDesc" class="text-sm text-[#F5E6C8] mt-1 max-w-md"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION 4: INTERACTIVE CANDLE BLOWING & WISH -->
+    <!-- ========================================== -->
+    <section id="wish-section" class="py-24 px-4 sm:px-6 max-w-4xl mx-auto scroll-mt-20">
+      <div class="text-center mb-12">
+        <span class="font-script text-3xl sm:text-4xl text-gold-400 block mb-1">Make a Wish</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold gold-gradient-text tracking-tight">Make a Wish, Fatika!</h2>
+        <p class="text-[#E5C578] text-sm sm:text-base mt-2 max-w-md mx-auto font-light">
+          Close your eyes, make the deepest wish in your heart, and tap the candle to blow out the flame.
+        </p>
+      </div>
+
+      <!-- Styled Birthday Cake Interactive Area -->
+      <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl border border-gold-500/40 text-center relative overflow-hidden max-w-lg mx-auto">
+        
+        <!-- Glowing Cake Container -->
+        <div class="relative py-8 flex flex-col items-center justify-center">
+
+          <!-- Candle Smoke Container -->
+          <div id="smokeContainer" class="relative w-8 h-16 pointer-events-none hidden">
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-400/80 smoke-puff"></div>
+          </div>
+
+          <!-- Candle Flame -->
+          <div id="candleFlameWrapper" onclick="blowOutCandle()" class="cursor-pointer group relative flex flex-col items-center -mb-1 transition-all">
+            <!-- Flame Aura Glow -->
+            <div id="flameGlow" class="absolute -top-4 w-14 h-18 bg-gold-400/40 rounded-full blur-md group-hover:scale-125 transition-transform"></div>
+            
+            <!-- Animated Flame -->
+            <div id="flame" class="w-5 h-9 bg-gradient-to-t from-orange-500 via-amber-300 to-yellow-100 rounded-[50%_50%_35%_35%] shadow-lg shadow-gold-400/90 animate-flicker"></div>
+            
+            <!-- Candle Wick -->
+            <div class="w-1 h-3 bg-neutral-900 rounded-sm -mt-0.5"></div>
+          </div>
+
+          <!-- Candle Body (Dark Velvet Red with Gold Spiral) -->
+          <div class="w-5 h-16 bg-gradient-to-r from-wine-700 via-wine-600 to-wine-800 rounded-t-sm shadow-md border-x border-gold-500/50 relative overflow-hidden">
+            <!-- Candle gold spiral stripes -->
+            <div class="w-full h-full opacity-40 bg-[repeating-linear-gradient(45deg,#D4AF37,#D4AF37_4px,transparent_4px,transparent_10px)]"></div>
+          </div>
+
+          <!-- Cake Top Tier (Deep Red Velvet & Golden Drip) -->
+          <div class="w-48 sm:w-56 h-14 bg-gradient-to-r from-wine-800 via-wine-700 to-wine-800 rounded-t-2xl relative shadow-md border-t-2 border-gold-400 flex items-end justify-center">
+            <!-- Frosting drips (Golden Cream) -->
+            <div class="absolute -bottom-1 inset-x-0 flex justify-around text-gold-300">
+              <span class="w-5 h-3 bg-gold-300 rounded-b-full shadow-sm"></span>
+              <span class="w-6 h-5 bg-gold-300 rounded-b-full shadow-sm"></span>
+              <span class="w-5 h-3 bg-gold-300 rounded-b-full shadow-sm"></span>
+              <span class="w-6 h-4 bg-gold-300 rounded-b-full shadow-sm"></span>
+              <span class="w-5 h-3 bg-gold-300 rounded-b-full shadow-sm"></span>
+            </div>
+            <!-- Decorative golden sugar pearls -->
+            <div class="absolute top-2 inset-x-4 flex justify-between">
+              <span class="w-2.5 h-2.5 rounded-full bg-gold-300 shadow-[0_0_8px_#D4AF37]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-sm"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-gold-300 shadow-[0_0_8px_#D4AF37]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-sm"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-gold-300 shadow-[0_0_8px_#D4AF37]"></span>
+            </div>
+          </div>
+
+          <!-- Cake Bottom Tier (Dark Velvet Red with Gold Script Ribbon) -->
+          <div class="w-64 sm:w-72 h-18 bg-gradient-to-r from-wine-900 via-wine-800 to-wine-900 rounded-b-xl shadow-lg border-t-4 border-gold-500/50 relative flex items-center justify-center">
+            <!-- Cake Center Ribbon Text in Gold -->
+            <span class="font-script text-3xl sm:text-4xl text-gold-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Fatika</span>
+          </div>
+
+          <!-- Cake Stand (Metallic Gold Plate) -->
+          <div class="w-72 sm:w-80 h-3 bg-gradient-to-r from-gold-600 via-gold-300 to-gold-600 rounded-full shadow-2xl mt-1 border-b border-gold-700"></div>
+          <div class="w-24 h-4 bg-gradient-to-b from-gold-500 to-gold-700 rounded-b-lg shadow-md"></div>
+        </div>
+
+        <!-- Wish Instruction & Blow Button -->
+        <div id="candleControls" class="mt-6">
+          <p id="candleStatus" class="text-sm font-medium text-gold-300 mb-4">
+            🔥 The golden candle is burning bright. Make your wish!
+          </p>
+          <button id="blowBtn" onclick="blowOutCandle()" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-wine-600 via-wine-500 to-wine-600 hover:from-wine-500 hover:to-wine-400 text-gold-100 font-semibold text-sm border border-gold-400 shadow-xl shadow-black/80 hover:scale-105 active:scale-95 transition-all">
+            <i data-lucide="wind" class="w-4 h-4 text-gold-300"></i>
+            <span>Blow Out Candle 💨</span>
+          </button>
+        </div>
+
+        <!-- Celebration Banner (Appears after blowing) -->
+        <div id="wishGrantedBanner" class="hidden mt-6 p-6 rounded-2xl bg-gradient-to-br from-wine-800 via-wine-700 to-wine-900 border border-gold-400 text-gold-100 shadow-2xl animate-float-slow">
+          <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-gold-400/20 flex items-center justify-center border border-gold-400">
+            <i data-lucide="sparkles" class="w-6 h-6 text-gold-300"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold gold-gradient-text mb-1">Wish Granted! ✨</h3>
+          <p class="text-sm text-[#F5E6C8] leading-relaxed max-w-sm mx-auto mb-4 font-light">
+            May all the secret prayers in your heart come alive this year, Fatika. You deserve boundless happiness!
+          </p>
+          <button onclick="relightCandle()" class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-wine-900/80 hover:bg-wine-800 text-gold-300 border border-gold-500/50 text-xs font-semibold backdrop-blur-sm transition-colors">
+            <i data-lucide="flame" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span>Relight & Wish Again</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FLOATING ROMANTIC BACKGROUND MUSIC PLAYER -->
+  <!-- ========================================== -->
+  <div id="musicFloatingPlayer" class="fixed bottom-5 right-5 z-40">
+    <div class="glass-card shadow-2xl rounded-full p-2 pr-4 flex items-center gap-3 border border-gold-500/50 bg-wine-950/90 backdrop-blur-xl hover:border-gold-400 transition-all">
+      <!-- Play / Pause Circle Button -->
+      <button onclick="toggleMusic()" class="w-10 h-10 rounded-full bg-gradient-to-br from-wine-600 via-wine-500 to-wine-700 text-gold-200 border border-gold-400 flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform">
+        <i id="musicPlayIcon" data-lucide="play" class="w-4 h-4 fill-gold-200 translate-x-0.5"></i>
+      </button>
+
+      <!-- Music Info & Frequency Bars -->
+      <div class="flex flex-col">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-serif font-bold text-gold-200 whitespace-nowrap">Happy Birthday Song 🎂</span>
+          <!-- Dynamic gold equalizer bars -->
+          <div id="equalizer" class="flex items-end gap-0.5 h-4 opacity-40">
+            <div class="w-1 bg-gold-400 rounded-full h-1 bar-1"></div>
+            <div class="w-1 bg-gold-400 rounded-full h-1 bar-2"></div>
+            <div class="w-1 bg-gold-400 rounded-full h-1 bar-3"></div>
+            <div class="w-1 bg-gold-400 rounded-full h-1 bar-4"></div>
+          </div>
+        </div>
+        <span id="musicTrackSub" class="text-[10px] text-gold-400/80 font-medium">Click to play birthday music</span>
+      </div>
+
+      <!-- Mute Toggle -->
+      <button onclick="toggleMute()" class="text-gold-400 hover:text-gold-200 p-1 transition-colors">
+        <i id="muteIcon" data-lucide="volume-2" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hidden Audio Elements for 100% Reliable Music -->
+  <!-- Primary streaming Happy Birthday acoustic music track -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/14/audio_9939f79883.mp3?filename=happy-birthday-to-you-piano-version-122475.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: DEVELOPER FOOTER / REFERENCE -->
+  <!-- ========================================== -->
+  <footer class="bg-gradient-to-t from-wine-950 via-[#120106] to-wine-950 text-gold-200 pt-16 pb-12 px-6 relative z-10 border-t border-gold-500/30">
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+      
+      <!-- Monogram flourish in Gold -->
+      <div class="w-12 h-12 rounded-full bg-wine-900 border-2 border-gold-400 flex items-center justify-center mb-4 text-gold-300 font-serif text-xl font-bold shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+        F
+      </div>
+
+      <h3 class="font-serif text-2xl font-bold gold-gradient-text mb-1">Happy Birthday, Fatika</h3>
+      <p class="text-[#E5C578] text-xs sm:text-sm font-light max-w-sm mb-6">
+        May this day mark the start of your happiest chapter yet. Never forget how truly special you are.
+      </p>
+
+      <!-- Exact Developer Credit Line -->
+      <a href="https://instagram.com/hashiii56_" target="_blank" rel="noopener noreferrer" class="py-3 px-6 rounded-full bg-wine-900/80 border border-gold-500/40 text-gold-200 text-sm mb-8 flex items-center gap-2 inline-flex hover:border-gold-300 hover:scale-[1.01] transition-all">
+        <span>All Rights Reserved by</span>
+        <span class="text-gold-300 font-semibold">@HASHIII56_</span>
+      </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-[11px] text-gold-500 font-mono">
+        Made with affection for Fatika's Birthday Celebration &bull; 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- MODAL: SET / CUSTOMIZE FATIKA'S BIRTH TIME -->
+  <!-- ========================================== -->
+  <div id="birthTimeModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 transition-all">
+    <div class="glass-card-deep bg-[#180208] rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-gold-500/50 relative text-left">
+      <button onclick="closeBirthTimeModal()" class="absolute top-5 right-5 text-gold-400 hover:text-gold-200 p-1.5 rounded-full hover:bg-wine-800 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-wine-800 text-gold-400 border border-gold-500/40 flex items-center justify-center shrink-0">
+          <i data-lucide="calendar-heart" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="font-serif text-xl font-bold text-gold-200">Fatika's Birth Time</h3>
+          <p class="text-xs text-gold-400">Set the exact birth date & hour to count down to</p>
+        </div>
+      </div>
+
+      <div class="space-y-4 my-5">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gold-300 mb-1.5">
+            Select Date & Exact Time:
+          </label>
+          <input 
+            type="datetime-local" 
+            id="birthTimeInput" 
+            class="w-full px-4 py-3 rounded-xl border border-gold-500/40 focus:outline-none focus:ring-2 focus:ring-gold-400 font-sans text-sm text-gold-200 bg-wine-900/80"
+          />
+        </div>
+
+        <!-- Quick Presets -->
+        <div>
+          <label class="block text-[11px] font-semibold uppercase tracking-wider text-gold-400/80 mb-2">Quick Presets:</label>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <button type="button" onclick="setPresetTime('tonight')" class="py-2 px-3 rounded-lg bg-wine-900/90 hover:bg-wine-800 text-gold-200 border border-gold-500/30 text-left transition-colors font-medium">
+              🌙 Tonight Midnight
+            </button>
+            <button type="button" onclick="setPresetTime('in2hours')" class="py-2 px-3 rounded-lg bg-wine-900/90 hover:bg-wine-800 text-gold-200 border border-gold-500/30 text-left transition-colors font-medium">
+              ⏳ In 2 Hours
+            </button>
+            <button type="button" onclick="setPresetTime('tomorrowMorning')" class="py-2 px-3 rounded-lg bg-wine-900/90 hover:bg-wine-800 text-gold-200 border border-gold-500/30 text-left transition-colors font-medium">
+              ☀️ Tomorrow 9:00 AM
+            </button>
+            <button type="button" onclick="setPresetTime('octoberSpecific')" class="py-2 px-3 rounded-lg bg-wine-900/90 hover:bg-wine-800 text-gold-200 border border-gold-500/30 text-left transition-colors font-medium">
+              🎂 Oct 16 Midnight
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-3 border-t border-gold-500/30">
+        <button onclick="closeBirthTimeModal()" class="px-4 py-2 rounded-xl text-xs font-semibold text-gold-400 hover:bg-wine-800 transition-colors">
+          Cancel
+        </button>
+        <button onclick="saveBirthTime()" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-wine-600 to-wine-500 hover:from-wine-500 hover:to-wine-400 text-gold-100 border border-gold-400 shadow-md transition-colors">
+          Save & Start Countdown
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC -->
+  <!-- ========================================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    const journeyButton = document.getElementById('startJourneyBtn');
+    if (journeyButton) {
+      journeyButton.addEventListener('click', () => {
+        document.body.classList.add('journey-started');
+      });
+    }
+
+    const customGalleryInput = document.getElementById('customGalleryInput');
+    const defaultGalleryData = [
+      {
+        title: 'Radiant Smile',
+        desc: 'A smile that can light up the entire room in an instant.',
+        src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Golden Hour Elegance',
+        desc: 'Sunlight kissing your hair and that effortless grace.',
+        src: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Carefree Laughter',
+        desc: 'The kind of pure joy that makes time stand completely still.',
+        src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Poise & Warmth',
+        desc: 'Quiet confidence and a kindness that touches everyone.',
+        src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Blooms of Love',
+        desc: 'Flowers bloom, but none quite as breathtaking as you.',
+        src: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80'
+      },
+      {
+        title: 'Forever Shining',
+        desc: "Here's to sparkling brighter with every single birthday.",
+        src: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80'
+      }
+    ];
+    let customGalleryImages = [];
+
+    function applyGallerySource(sourcePool) {
+      const imageSlots = Array.from({ length: 6 }, (_, index) => document.getElementById(`gallery-img-${index}`));
+      const safePool = (sourcePool && sourcePool.length ? sourcePool : defaultGalleryData).slice(0, 6);
+      galleryData = safePool;
+
+      imageSlots.forEach((img, index) => {
+        const item = safePool[index] || safePool[0];
+        if (img && item) {
+          img.src = item.src;
+          img.alt = item.title || 'Fatika memory';
+        }
+      });
+
+      if (galleryData.length && currentLightboxIdx >= galleryData.length) {
+        currentLightboxIdx = 0;
+      }
+      updateLightboxContent();
+    }
+
+    function applyUploadedGallery() {
+      applyGallerySource(customGalleryImages.length ? customGalleryImages : defaultGalleryData);
+    }
+
+    async function loadGalleryFromUploads() {
+      try {
+        const response = await fetch('/api/gallery');
+        if (!response.ok) return;
+        const uploaded = await response.json();
+        if (Array.isArray(uploaded) && uploaded.length) {
+          customGalleryImages = uploaded;
+          applyGallerySource(uploaded);
+        } else {
+          applyGallerySource(defaultGalleryData);
+        }
+      } catch (error) {
+        applyGallerySource(defaultGalleryData);
+      }
+    }
+
+    if (customGalleryInput) {
+      customGalleryInput.addEventListener('change', (event) => {
+        const files = Array.from(event.target.files || []).filter(file => file.type.startsWith('image/')).slice(0, 6);
+        customGalleryImages = files.map(file => ({
+          title: file.name.replace(/\.[^/.]+$/, '') || 'Your Memory',
+          desc: 'Your uploaded memory.',
+          src: URL.createObjectURL(file)
+        }));
+        applyUploadedGallery();
+      });
+    }
+
+    loadGalleryFromUploads();
+
+    // ----------------------------------------------------
+    // COUNTDOWN TIMER TO FATIKA'S BIRTH MOMENT
+    // ----------------------------------------------------
+    const STORAGE_KEY = 'fatika_birth_target_time';
+    
+    function getDefaultTargetDate() {
+      const now = new Date();
+      // Default: Upcoming midnight (starts tomorrow 00:00:00)
+      return new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+    }
+
+    let targetBirthTime = null;
+    try {
+      const storedTime = localStorage.getItem(STORAGE_KEY);
+      if (storedTime) {
+        targetBirthTime = new Date(storedTime);
+      }
+    } catch (e) {
+      console.warn("Storage access limited:", e);
+    }
+    
+    if (!targetBirthTime || isNaN(targetBirthTime.getTime())) {
+      targetBirthTime = getDefaultTargetDate();
+    }
+
+    let celebrationTriggered = false;
+
+    function formatDisplayDate(date) {
+      const options = { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true };
+      return date.toLocaleString('en-US', options);
+    }
+
+    function updateTargetBadge() {
+      const badge = document.getElementById('targetTimeBadge');
+      if (badge && targetBirthTime) {
+        badge.textContent = formatDisplayDate(targetBirthTime);
+      }
+    }
+
+    function tickCountdown() {
+      if (!targetBirthTime) return;
+      const now = new Date();
+      const diff = targetBirthTime.getTime() - now.getTime();
+
+      const daysEl = document.getElementById('cdDays');
+      const hoursEl = document.getElementById('cdHours');
+      const minsEl = document.getElementById('cdMinutes');
+      const secsEl = document.getElementById('cdSeconds');
+      const gridEl = document.getElementById('countdownGrid');
+      const celebEl = document.getElementById('countdownCelebration');
+      const kickerEl = document.getElementById('countdownKicker');
+      const titleEl = document.getElementById('countdownTitle');
+      const subEl = document.getElementById('countdownSub');
+
+      if (diff <= 0) {
+        // Target moment reached or elapsed
+        if (gridEl) gridEl.classList.add('hidden');
+        if (celebEl) celebEl.classList.remove('hidden');
+        if (kickerEl) kickerEl.textContent = "Celebration Time!";
+        if (titleEl) titleEl.textContent = "Happy Birthday, Fatika! ✨";
+        if (subEl) subEl.textContent = "The moment has arrived! Tonight and always belongs to you.";
+
+        // Calculate elapsed time since birth moment
+        const elapsed = Math.abs(diff);
+        const eDays = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+        const eHours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
+        const eMins = Math.floor((elapsed / (1000 * 60)) % 60);
+        const eSecs = Math.floor((elapsed / 1000) % 60);
+        const elapsedTextEl = document.getElementById('elapsedText');
+        if (elapsedTextEl) {
+          elapsedTextEl.textContent = `The world has been blessed by Fatika's light for ${eDays}d ${eHours}h ${eMins}m ${eSecs}s since this moment!`;
+        }
+
+        if (!celebrationTriggered) {
+          celebrationTriggered = true;
+          triggerLoveConfetti();
+        }
+      } else {
+        // Active countdown
+        if (gridEl) gridEl.classList.remove('hidden');
+        if (celebEl) celebEl.classList.add('hidden');
+        if (kickerEl) kickerEl.textContent = "Awaiting The Exact Moment of Fatika's Birth";
+        if (titleEl) titleEl.textContent = "Counting Down to Fatika's Special Moment ✨";
+        if (subEl) subEl.textContent = "Every passing second brings us closer to celebrating the exact minute you blessed this earth.";
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minsEl) minsEl.textContent = String(minutes).padStart(2, '0');
+        if (secsEl) secsEl.textContent = String(seconds).padStart(2, '0');
+      }
+    }
+
+    // Modal controls for Custom Birth Time
+    const birthTimeModal = document.getElementById('birthTimeModal');
+    const birthTimeInput = document.getElementById('birthTimeInput');
+
+    function openBirthTimeModal() {
+      if (!birthTimeModal) return;
+      if (targetBirthTime) {
+        const tzOffset = targetBirthTime.getTimezoneOffset() * 60000;
+        const localISOTime = (new Date(targetBirthTime.getTime() - tzOffset)).toISOString().slice(0, 16);
+        birthTimeInput.value = localISOTime;
+      }
+      birthTimeModal.classList.remove('hidden');
+      birthTimeModal.classList.add('flex');
+      lucide.createIcons();
+    }
+
+    function closeBirthTimeModal() {
+      if (!birthTimeModal) return;
+      birthTimeModal.classList.add('hidden');
+      birthTimeModal.classList.remove('flex');
+    }
+
+    function setPresetTime(preset) {
+      const now = new Date();
+      let target = new Date();
+      if (preset === 'tonight') {
+        target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+      } else if (preset === 'in2hours') {
+        target = new Date(now.getTime() + 2 * 60 * 60 * 1000);
+      } else if (preset === 'tomorrowMorning') {
+        target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 9, 0, 0);
+      } else if (preset === 'octoberSpecific') {
+        target = new Date(now.getFullYear(), now.getMonth(), 16, 0, 0, 0);
+      }
+      const tzOffset = target.getTimezoneOffset() * 60000;
+      birthTimeInput.value = (new Date(target.getTime() - tzOffset)).toISOString().slice(0, 16);
+    }
+
+    function saveBirthTime() {
+      if (!birthTimeInput.value) return;
+      const newDate = new Date(birthTimeInput.value);
+      if (!isNaN(newDate.getTime())) {
+        targetBirthTime = newDate;
+        try {
+          localStorage.setItem(STORAGE_KEY, newDate.toISOString());
+        } catch (e) {
+          console.warn("Storage save error:", e);
+        }
+        celebrationTriggered = false;
+        updateTargetBadge();
+        tickCountdown();
+        closeBirthTimeModal();
+        triggerLoveConfetti();
+      }
+    }
+
+    // Initial setup
+    updateTargetBadge();
+    tickCountdown();
+    setInterval(tickCountdown, 1000);
+
+    // ----------------------------------------------------
+    // 1. FLOATING AMBIENT CANVAS (Gold Sparkles & Ruby Hearts)
+    // ----------------------------------------------------
+    const canvas = document.getElementById('ambientCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    const particles = [];
+    const totalParticles = 48;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class FloatingItem {
+      constructor() {
+        this.reset(true);
+      }
+      reset(initial = false) {
+        this.x = Math.random() * width;
+        this.y = initial ? Math.random() * height : height + 20;
+        this.size = Math.random() * 14 + 8;
+        this.speedY = Math.random() * 0.8 + 0.3;
+        this.speedX = (Math.random() - 0.5) * 0.6;
+        this.opacity = Math.random() * 0.6 + 0.25;
+        this.type = Math.random() > 0.45 ? 'heart' : 'sparkle';
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+        // Rich Gold or Ruby Red
+        this.color = Math.random() > 0.35 ? 'rgba(245, 208, 97,' : 'rgba(201, 24, 74,';
+      }
+      update() {
+        this.y -= this.speedY;
+        this.x += this.speedX;
+        this.rotation += this.rotationSpeed;
+        if (this.y < -30 || this.x < -30 || this.x > width + 30) {
+          this.reset(false);
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.fillStyle = this.color + this.opacity + ')';
+
+        if (this.type === 'heart') {
+          // Draw delicate heart
+          ctx.beginPath();
+          const d = this.size;
+          ctx.moveTo(0, d / 4);
+          ctx.quadraticCurveTo(0, 0, d / 4, 0);
+          ctx.quadraticCurveTo(d / 2, 0, d / 2, d / 4);
+          ctx.quadraticCurveTo(d / 2, 0, (3 * d) / 4, 0);
+          ctx.quadraticCurveTo(d, 0, d, d / 4);
+          ctx.quadraticCurveTo(d, d / 2, (3 * d) / 4, (3 * d) / 4);
+          ctx.lineTo(d / 2, d);
+          ctx.lineTo(d / 4, (3 * d) / 4);
+          ctx.quadraticCurveTo(0, d / 2, 0, d / 4);
+          ctx.fill();
+        } else {
+          // Draw 4-point star sparkle
+          ctx.beginPath();
+          const r = this.size / 2;
+          ctx.moveTo(0, -r);
+          ctx.quadraticCurveTo(0, 0, r, 0);
+          ctx.quadraticCurveTo(0, 0, 0, r);
+          ctx.quadraticCurveTo(0, 0, -r, 0);
+          ctx.quadraticCurveTo(0, 0, 0, -r);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < totalParticles; i++) {
+      particles.push(new FloatingItem());
+    }
+
+    function animateAmbient() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateAmbient);
+    }
+    animateAmbient();
+
+    // ----------------------------------------------------
+    // CURSOR ROMANTIC HEART PARTICLES (Mousemove & Touchmove)
+    // ----------------------------------------------------
+    const cursorCanvas = document.getElementById('cursorCanvas');
+    const cCtx = cursorCanvas.getContext('2d');
+    let cWidth, cHeight;
+    const cursorHearts = [];
+
+    function resizeCursorCanvas() {
+      cWidth = cursorCanvas.width = window.innerWidth;
+      cHeight = cursorCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCursorCanvas);
+    resizeCursorCanvas();
+
+    class CursorHeart {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        // Small ephemeral size (8px to 16px)
+        this.size = Math.random() * 8 + 8;
+        // Natural romantic drift with gentle upward float
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 1.6 + 0.5;
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed - 1.2; // Float gently upward
+        this.alpha = 1;
+        this.decay = Math.random() * 0.024 + 0.018; // Lifespan ~0.7 to 1.1s
+        this.rotation = (Math.random() - 0.5) * 0.8;
+        this.rotSpeed = (Math.random() - 0.5) * 0.06;
+        this.scale = 1;
+
+        // Alternating Royal Metallic Gold and Passionate Ruby Red
+        const isGold = Math.random() > 0.45;
+        if (isGold) {
+          const goldHues = ['#FFF6D1', '#F5D061', '#D4AF37', '#FDE68A', '#E5B438'];
+          this.color = goldHues[Math.floor(Math.random() * goldHues.length)];
+          this.glow = 'rgba(245, 208, 97, 0.7)';
+        } else {
+          const redHues = ['#E63946', '#C9184A', '#A4133C', '#800020', '#FF4D6D'];
+          this.color = redHues[Math.floor(Math.random() * redHues.length)];
+          this.glow = 'rgba(201, 24, 74, 0.7)';
+        }
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vy += 0.015; // Delicate floating settle
+        this.rotation += this.rotSpeed;
+        this.alpha -= this.decay;
+        this.scale = Math.max(0, this.alpha);
+      }
+
+      draw() {
+        if (this.alpha <= 0) return;
+        cCtx.save();
+        cCtx.translate(this.x, this.y);
+        cCtx.rotate(this.rotation);
+        cCtx.scale(this.scale, this.scale);
+        cCtx.globalAlpha = Math.max(0, this.alpha);
+        cCtx.fillStyle = this.color;
+        cCtx.shadowColor = this.glow;
+        cCtx.shadowBlur = 8;
+
+        // Draw graceful romantic heart
+        cCtx.beginPath();
+        const d = this.size;
+        cCtx.moveTo(0, d / 4);
+        cCtx.quadraticCurveTo(0, 0, d / 4, 0);
+        cCtx.quadraticCurveTo(d / 2, 0, d / 2, d / 4);
+        cCtx.quadraticCurveTo(d / 2, 0, (3 * d) / 4, 0);
+        cCtx.quadraticCurveTo(d, 0, d, d / 4);
+        cCtx.quadraticCurveTo(d, d / 2, (3 * d) / 4, (3 * d) / 4);
+        cCtx.lineTo(d / 2, d);
+        cCtx.lineTo(d / 4, (3 * d) / 4);
+        cCtx.quadraticCurveTo(0, d / 2, 0, d / 4);
+        cCtx.fill();
+
+        cCtx.restore();
+      }
+    }
+
+    // Throttle cursor heart spawns slightly for silky 60fps performance
+    let lastCursorSpawn = 0;
+    function spawnCursorHeartTrail(x, y) {
+      const now = performance.now();
+      if (now - lastCursorSpawn < 20) return;
+      lastCursorSpawn = now;
+      cursorHearts.push(new CursorHeart(x, y));
+      if (Math.random() > 0.5) {
+        cursorHearts.push(new CursorHeart(x + (Math.random() - 0.5) * 12, y + (Math.random() - 0.5) * 12));
+      }
+    }
+
+    // Mouse-move event listener
+    window.addEventListener('mousemove', (e) => {
+      spawnCursorHeartTrail(e.clientX, e.clientY);
+    });
+
+    // Mobile / touch support
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches[0]) {
+        spawnCursorHeartTrail(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    function animateCursorHearts() {
+      cCtx.clearRect(0, 0, cWidth, cHeight);
+      for (let i = cursorHearts.length - 1; i >= 0; i--) {
+        const h = cursorHearts[i];
+        h.update();
+        h.draw();
+        if (h.alpha <= 0) {
+          cursorHearts.splice(i, 1);
+        }
+      }
+      requestAnimationFrame(animateCursorHearts);
+    }
+    animateCursorHearts();
+
+    // ----------------------------------------------------
+    // 2. ENVELOPE OPEN / CLOSE INTERACTION
+    // ----------------------------------------------------
+    let isEnvelopeOpen = false;
+
+    function openEnvelope() {
+      if (isEnvelopeOpen) return;
+      isEnvelopeOpen = true;
+
+      // Play subtle chime sound
+      playSubtleBell();
+
+      const cover = document.getElementById('envelopeCover');
+      const letter = document.getElementById('letterPaper');
+
+      cover.classList.add('opacity-0', 'scale-95');
+      setTimeout(() => {
+        cover.classList.add('hidden');
+        letter.classList.remove('hidden');
+        setTimeout(() => {
+          letter.classList.remove('opacity-0', 'translate-y-6');
+          letter.classList.add('opacity-100', 'translate-y-0');
+          // Fire initial celebratory gold & ruby confetti
+          triggerLoveConfetti();
+        }, 50);
+      }, 400);
+    }
+
+    function triggerLetterAutoOpen() {
+      setTimeout(() => {
+        if (!isEnvelopeOpen) {
+          openEnvelope();
+        }
+      }, 600);
+    }
+
+    function triggerLoveConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 65,
+          spread: 80,
+          origin: { y: 0.6 },
+          colors: ['#D4AF37', '#F5D061', '#FFF6D1', '#800020', '#C9184A']
+        });
+      }
+    }
+
+    // ----------------------------------------------------
+    // 3. PHOTO GALLERY & LIGHTBOX
+    // ----------------------------------------------------
+    let galleryData = [
+      {
+        title: "Radiant Smile",
+        desc: "A smile that can light up the entire room in an instant.",
+        src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Golden Hour Elegance",
+        desc: "Sunlight kissing your hair and that effortless grace.",
+        src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Carefree Laughter",
+        desc: "The kind of pure joy that makes time stand completely still.",
+        src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Poise & Warmth",
+        desc: "Quiet confidence and a kindness that touches everyone.",
+        src: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Blooms of Love",
+        desc: "Flowers bloom, but none quite as breathtaking as you.",
+        src: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        title: "Forever Shining",
+        desc: "Here's to sparkling brighter with every single birthday.",
+        src: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1200&q=80"
+      }
+    ];
+
+    let currentLightboxIdx = 0;
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+
+    function openLightbox(idx) {
+      currentLightboxIdx = idx;
+      updateLightboxContent();
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      lightboxModal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function prevLightbox() {
+      currentLightboxIdx = (currentLightboxIdx - 1 + galleryData.length) % galleryData.length;
+      updateLightboxContent();
+    }
+
+    function nextLightbox() {
+      currentLightboxIdx = (currentLightboxIdx + 1) % galleryData.length;
+      updateLightboxContent();
+    }
+
+    function updateLightboxContent() {
+      const item = galleryData[currentLightboxIdx];
+      lightboxImg.src = item.src;
+      lightboxTitle.textContent = item.title;
+      lightboxDesc.textContent = item.desc;
+    }
+
+    // Keyboard navigation for lightbox
+    window.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevLightbox();
+        if (e.key === 'ArrowRight') nextLightbox();
+      }
+    });
+
+    // ----------------------------------------------------
+    // 5. CANDLE BLOWING & GOLD CONFETTI
+    // ----------------------------------------------------
+    let isCandleBlown = false;
+
+    function blowOutCandle() {
+      if (isCandleBlown) return;
+      isCandleBlown = true;
+
+      const flame = document.getElementById('flame');
+      const flameGlow = document.getElementById('flameGlow');
+      const smokeContainer = document.getElementById('smokeContainer');
+      const candleControls = document.getElementById('candleControls');
+      const wishGrantedBanner = document.getElementById('wishGrantedBanner');
+
+      // Extinguish Flame
+      flame.style.transition = 'all 0.3s ease-out';
+      flame.style.opacity = '0';
+      flame.style.transform = 'scale(0.2)';
+      flameGlow.style.opacity = '0';
+
+      // Show Rising Smoke
+      smokeContainer.classList.remove('hidden');
+
+      // Play soft puff / bell sound
+      playWishMelody();
+
+      // Launch Golden & Crimson Confetti Explosion
+      fireCelebrationConfetti();
+
+      // Hide Controls & Display Banner
+      setTimeout(() => {
+        candleControls.classList.add('hidden');
+        wishGrantedBanner.classList.remove('hidden');
+      }, 500);
+    }
+
+    function relightCandle() {
+      isCandleBlown = false;
+      const flame = document.getElementById('flame');
+      const flameGlow = document.getElementById('flameGlow');
+      const smokeContainer = document.getElementById('smokeContainer');
+      const candleControls = document.getElementById('candleControls');
+      const wishGrantedBanner = document.getElementById('wishGrantedBanner');
+
+      smokeContainer.classList.add('hidden');
+      flame.style.opacity = '1';
+      flame.style.transform = 'scale(1)';
+      flameGlow.style.opacity = '1';
+
+      wishGrantedBanner.classList.add('hidden');
+      candleControls.classList.remove('hidden');
+      document.getElementById('candleStatus').textContent = "🔥 The golden candle is relit! Make another wish, Fatika!";
+    }
+
+    function fireCelebrationConfetti() {
+      if (typeof confetti !== 'function') return;
+
+      // Burst 1: Golden Stars & Ruby Velvet Confetti
+      confetti({
+        particleCount: 120,
+        spread: 100,
+        origin: { y: 0.6 },
+        colors: ['#D4AF37', '#F5D061', '#FFF6D1', '#800020', '#C9184A']
+      });
+
+      // Burst 2: Gold Side Cannons
+      setTimeout(() => {
+        confetti({
+          particleCount: 75,
+          angle: 60,
+          spread: 70,
+          origin: { x: 0, y: 0.7 },
+          colors: ['#F5D061', '#D4AF37', '#FFF6D1', '#800020']
+        });
+        confetti({
+          particleCount: 75,
+          angle: 120,
+          spread: 70,
+          origin: { x: 1, y: 0.7 },
+          colors: ['#F5D061', '#D4AF37', '#FFF6D1', '#800020']
+        });
+      }, 300);
+
+      // Burst 3: Floating Golden Hearts Drop
+      setTimeout(() => {
+        confetti({
+          particleCount: 90,
+          spread: 120,
+          origin: { y: 0.4 },
+          scalar: 1.25,
+          colors: ['#D4AF37', '#F5D061', '#FFFBEA', '#800020']
+        });
+      }, 700);
+    }
+
+    // ----------------------------------------------------
+    // 6. ROMANTIC MUSIC PLAYER & WEB AUDIO SYNTHESIZER
+    // ----------------------------------------------------
+    let isPlaying = false;
+    let isMuted = false;
+    const audio = document.getElementById('bgAudio');
+    const musicPlayIcon = document.getElementById('musicPlayIcon');
+    const musicTrackSub = document.getElementById('musicTrackSub');
+    const equalizer = document.getElementById('equalizer');
+    const muteIcon = document.getElementById('muteIcon');
+    let audioPlayPromise = null;
+
+    // Web Audio API context fallback in case stream fails or blocked
+    let audioCtx = null;
+    let synthInterval = null;
+
+    function initAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    function toggleMusic() {
+      initAudioContext();
+      if (!isPlaying) {
+        startMusicPlayback();
+      } else {
+        stopMusicPlayback();
+      }
+    }
+
+    function startMusicPlayback() {
+      isPlaying = true;
+      if (musicTrackSub) musicTrackSub.textContent = "Playing Happy Birthday 🎂";
+      if (musicPlayIcon) musicPlayIcon.setAttribute('data-lucide', 'pause');
+      if (equalizer) {
+        equalizer.classList.remove('opacity-40');
+        equalizer.classList.add('opacity-100');
+      }
+
+      // Safe Happy Birthday stream playback with Promise handling
+      audioPlayPromise = audio.play();
+      if (audioPlayPromise !== undefined && audioPlayPromise !== null) {
+        audioPlayPromise
+          .then(() => {
+            audioPlayPromise = null;
+          })
+          .catch(err => {
+            audioPlayPromise = null;
+            if (err.name === 'AbortError') {
+              // Intentionally interrupted by pause() - do not start synthetic music
+              return;
+            }
+            if (!isPlaying) return;
+            console.log("Stream audio offline or restricted, starting Happy Birthday music-box synth:", err);
+            startSyntheticMusic();
+          });
+      }
+
+      lucide.createIcons();
+    }
+
+    function stopMusicPlayback() {
+      isPlaying = false;
+      if (musicTrackSub) musicTrackSub.textContent = "Music Paused";
+      if (musicPlayIcon) musicPlayIcon.setAttribute('data-lucide', 'play');
+      if (equalizer) {
+        equalizer.classList.add('opacity-40');
+        equalizer.classList.remove('opacity-100');
+      }
+
+      // Safely pause audio only after any in-flight play() promise settles
+      if (audioPlayPromise !== undefined && audioPlayPromise !== null) {
+        audioPlayPromise
+          .then(() => {
+            audio.pause();
+          })
+          .catch(() => {
+            audio.pause();
+          });
+      } else {
+        audio.pause();
+      }
+
+      stopSyntheticMusic();
+      lucide.createIcons();
+    }
+
+    function toggleMute() {
+      isMuted = !isMuted;
+      audio.muted = isMuted;
+      if (isMuted) {
+        muteIcon.setAttribute('data-lucide', 'volume-x');
+      } else {
+        muteIcon.setAttribute('data-lucide', 'volume-2');
+      }
+      lucide.createIcons();
+    }
+
+    // Authentic "Happy Birthday to You" Acoustic Chime Score
+    const birthdayMelody = [
+      // "Hap-py Birth-day to you"
+      { note: 261.63, dur: 0.28, delay: 360 },
+      { note: 261.63, dur: 0.16, delay: 240 },
+      { note: 293.66, dur: 0.45, delay: 520 },
+      { note: 261.63, dur: 0.45, delay: 520 },
+      { note: 349.23, dur: 0.48, delay: 520 },
+      { note: 329.63, dur: 0.85, delay: 880 },
+      { note: 0,      dur: 0.05, delay: 300 },
+
+      // "Hap-py Birth-day to you"
+      { note: 261.63, dur: 0.28, delay: 360 },
+      { note: 261.63, dur: 0.16, delay: 240 },
+      { note: 293.66, dur: 0.45, delay: 520 },
+      { note: 261.63, dur: 0.45, delay: 520 },
+      { note: 392.00, dur: 0.48, delay: 520 },
+      { note: 349.23, dur: 0.85, delay: 880 },
+      { note: 0,      dur: 0.05, delay: 300 },
+
+      // "Hap-py Birth-day dear Fa-ti-ka"
+      { note: 261.63, dur: 0.28, delay: 360 },
+      { note: 261.63, dur: 0.16, delay: 240 },
+      { note: 523.25, dur: 0.50, delay: 520 },
+      { note: 440.00, dur: 0.50, delay: 520 },
+      { note: 349.23, dur: 0.45, delay: 520 },
+      { note: 329.63, dur: 0.45, delay: 520 },
+      { note: 293.66, dur: 0.85, delay: 880 },
+      { note: 0,      dur: 0.05, delay: 300 },
+
+      // "Hap-py Birth-day to you!"
+      { note: 466.16, dur: 0.28, delay: 360 },
+      { note: 466.16, dur: 0.16, delay: 240 },
+      { note: 440.00, dur: 0.50, delay: 520 },
+      { note: 349.23, dur: 0.50, delay: 520 },
+      { note: 392.00, dur: 0.50, delay: 520 },
+      { note: 349.23, dur: 1.20, delay: 1200 },
+      { note: 0,      dur: 0.10, delay: 1000 },
+    ];
+
+    let synthTimeout = null;
+    let bNoteIdx = 0;
+
+    function playNextBirthdayNote() {
+      if (!isPlaying || isMuted || !audioCtx) return;
+      const step = birthdayMelody[bNoteIdx % birthdayMelody.length];
+      bNoteIdx++;
+      if (step.note > 0) {
+        playChime(step.note, step.dur, 0.14);
+        // Soft bass harmony on sustained notes
+        if (step.dur >= 0.5) {
+          playChime(step.note * 0.5, step.dur * 0.8, 0.06);
+        }
+      }
+      synthTimeout = setTimeout(playNextBirthdayNote, step.delay);
+    }
+
+    function startSyntheticMusic() {
+      if (synthTimeout) return;
+      bNoteIdx = 0;
+      playNextBirthdayNote();
+    }
+
+    function stopSyntheticMusic() {
+      if (synthTimeout) {
+        clearTimeout(synthTimeout);
+        synthTimeout = null;
+      }
+    }
+
+    function playChime(freq, duration = 0.5, volume = 0.12) {
+      if (!audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(volume, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function playSubtleBell() {
+      initAudioContext();
+      if (!audioCtx) return;
+      [659.25, 880.00, 1046.50].forEach((freq, idx) => {
+        setTimeout(() => playChime(freq, 0.8), idx * 120);
+      });
+    }
+
+    function playWishMelody() {
+      initAudioContext();
+      if (!audioCtx) return;
+      [523.25, 659.25, 783.99, 1046.50, 1318.51].forEach((freq, idx) => {
+        setTimeout(() => playChime(freq, 0.9), idx * 100);
+      });
+    }
+
+    // Auto-prompt music on first user touch anywhere to comply with browser autoplay policies
+    window.addEventListener('click', function onFirstClick() {
+      initAudioContext();
+      window.removeEventListener('click', onFirstClick);
+    }, { once: true });
+  </script>
+</body>
+</html>
